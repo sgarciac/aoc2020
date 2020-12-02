@@ -64,12 +64,12 @@
 (defvar *input-p2* (read-input-p2 "input"))
 
 (defun valid-entry-p2-p (entry)
-	(let ((first-match (if (= (aref (entry-p2-word entry) (1- (entry-p2-first entry)))
-														(entry-p2-letter entry))
+	(let ((first-match (if (eq (aref (entry-p2-word entry) (1- (entry-p2-first entry)))
+														 (entry-p2-letter entry))
 												 1 0
 												 ))
-				(second-match (if (= (aref (entry-p2-word entry) (1- (entry-p2-second entry)))
-														 (entry-p2-letter entry))
+				(second-match (if (eq (aref (entry-p2-word entry) (1- (entry-p2-second entry)))
+															(entry-p2-letter entry))
 													1 0)))
 		(= 1 (+ first-match second-match))))
 
@@ -79,4 +79,5 @@
 
 ;; solutions
 (valid-entries-count *input*)
+
 (valid-entries-p2-count *input-p2*)
