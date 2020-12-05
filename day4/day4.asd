@@ -6,6 +6,6 @@
   :license  "Specify license here"
   :version "0.0.1"
   :serial t
-  :depends-on (#:alexandria #:split-sequence)
+  :depends-on (#:alexandria #:split-sequence #:cl-ppcre)
   :components ((:file "package")
                (:file "day4")))
